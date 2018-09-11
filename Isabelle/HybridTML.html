@@ -1,0 +1,66 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Isabelle files</title>
+  <meta name="description" content="Isabelle files for Hybrid TML proof">
+  <meta name="author" content="Alasdair Armstrong and Brijesh Dongol">
+
+  <!--link rel="stylesheet" href="css/styles.css?v=1.0"-->
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <h2>Isabelle files for modular opacity proofs of Hybrid
+  Transactional Memory</h2>
+  <h3>Authors: Alasdair Armstrong and Brijesh Dongol</h3>
+
+  <p>
+  <a href="nfm.pdf"> Here is the associated paper.</a> 
+
+  This page contains Isabelle theory files for proving correctness
+  of hybrid transactional memory in a modular fashion,
+  leveraging 
+  the <a href="http://dx.doi.org/10.1007/s00165-012-0225-8">TMS2
+  specification</a> and Lesani et
+    al's <a href="http://people.csail.mit.edu/lesani/downloads/Papers/WTTM12.pdf">results</a>,
+    these proofs establish opacity of two novel hybrid versions of the
+  <a href="http://dx.doi.org/10.1007/978-3-642-15291-7_2"> Dalessandro et al.'s
+  transactional mutex lock </a>.
+  <p>
+
+  Modularisation is based on a concept we refer to as open I/O automata. 
+  
+
+  <p>
+    
+    <a href="FORTE-2017-Isabelle.zip"> Download the theory
+      files here.</a> The zip file consists of two folders:
+    <ul>
+      <li> <i> naive</i>, a simple implementation and proof, where the fast and slow path
+      both synchronise on the same global variable, and  
+      <li> <i> 2-Counter</i>, an improved implementation and proof, where the
+      slow- and fast-path transactions synchronise on different variables, allowing
+      more concurrency.  
+    </ul>
+  <p>
+
+  The proofs
+  require <a href="https://isabelle.in.tum.de/installation.html">
+      Isabelle 2016. </a>
+  <p> If you encounter a problem loading Seq.thy,
+  please make sure imports is set to  "../HOLCF". This is a
+  problem with the new Isabelle distribution.
+  
+</body>
+
+
+</html>
+
+
+

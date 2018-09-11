@@ -1,0 +1,75 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Isabelle files</title>
+  <meta name="description" content="Isabelle files for MSPessTM proof">
+  <meta name="author" content="Simon Doherty, Brijesh Dongol, John
+			       Derrick, Gerhard Schellhorn, Heike Wehrheim">
+
+  <!--link rel="stylesheet" href="css/styles.css?v=1.0"-->
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <h2>Isabelle files for a verification of pessimistic STM algorithm</h2>
+  <h3>Authors: Simon Doherty, Brijesh Dongol, John Derrick, Gerhard
+  Schellhorn and Heike Wehrheim</h3>
+
+  This page contains the Isabelle theory files that show refinement
+  between Matveev and Shavit's
+  <a href="http://transact2012.cse.lehigh.edu/papers/matveev.pdf"> pessimistic transactional 
+    memory algorithm</a> (MSPessTM) and
+  the <a href="http://dx.doi.org/10.1007/s00165-012-0225-8">TMS2 specification</a>. Leveraging
+  Lesani et
+    al's <a href="http://people.csail.mit.edu/lesani/downloads/Papers/WTTM12.pdf">results</a>,
+    these proofs establish opacity of MSPessTM.
+
+  
+
+  <p>
+    
+    <a href="Pessimistic.tar.gz"> Download the theory
+      files here.</a> The tarball consists of the following:
+    <ul>
+      <li> Main files
+	<ul> 
+	  <li> <tt> TMS2.thy </tt> - contains the IOA specification of TMS2
+	  <li> <tt> MSPessTM.thy </tt>  contains the I/O automata encoding of the
+	    MSPessTM algorithm,  invariants and supporting lemmas
+	  <li> <tt> MSPessTMCorrect.thy </tt> contains the simulation
+	    relation and all associated proofs
+	  proof 
+	</ul>
+      <li> Supporting files
+	<ul> 
+	  <li> <tt>Transitions.thy </tt>  and <tt> Interface.thy</tt> provide
+	    tools for uniformly constructing automata that represent
+	    STM implementations.
+	    
+	  <li> <tt> Utilities.thy</tt> and <tt> RWMemory.thy </tt>
+	    define some concepts 
+	    that are shared between the other theories.
+	</ul>
+    </ul>
+  <p>
+
+  The proofs
+  require <a href="https://isabelle.in.tum.de/installation.html">
+      Isabelle 2016. </a>
+  <p> If you encounter a problem loading Seq.thy,
+  please make sure imports is set to  "../HOLCF". This is a
+  problem with the new Isabelle distribution.
+  
+</body>
+
+
+</html>
+
+
+
